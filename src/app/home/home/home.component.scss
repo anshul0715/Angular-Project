@@ -1,12 +1,48 @@
-
-h3{
-    color: red;
-    text-align: center;
+h1{
+  text-align: center;
 }
-.first{
-    text-align: right;
-    .second{
-        text-align: center;
-        color: blue;
-    }
+
+.form-signin {
+  background-color: rgb(128, 108, 110);
+  border-radius: 5%;
+  width: 100%;
+  max-width: 350px;
+  padding: 15px;
+  margin: auto;
+}
+ 
+.form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+
+  .top {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .middle{
+    border-radius: 0;
+    margin-bottom: -1px;
+  }
+  
+  .bottom {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+  
+  
+  
+img{
+  border-radius: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  width: 150px;
 }
