@@ -1,8 +1,10 @@
-h1{
+.download{
     text-align: center;
-}
-
-div{
-    padding: 30px;
-    padding-bottom: 10px;
-}
+    padding: 2% 15%;
+    .download-buttons{
+      margin: 10px;
+    }
+    .comp-heading{
+        font-family: sans-serif;
+    }
+  }
