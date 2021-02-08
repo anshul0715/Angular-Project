@@ -1,20 +1,29 @@
-<h1 class="heading"><strong>Sign-up for our Newsletter</strong></h1>
-<form class="form-signin" >
-    <img class="mb-4" src="https://miro.medium.com/max/3150/1*Bpcx2kqGvx4l8OAazcLyxw.jpeg" alt="mindfire logo" width="72" height="72">
+<div class="my-form">
+  
+  <form class="form-signin" >
+    <img src="assets/mf-logo.png" alt="mindfire logo">
     <h1 class="h3 mb-3 font-weight-normal">Signup</h1>
 
-    <input type="text" name="fname" class="form-control top" placeholder="First Name" required autofocus>
-    <input type="text" name="lname" class="form-control middle" placeholder="Last Name" required>
-    <input type="email" name="email" class="form-control bottom" placeholder="Email" required>
-    <div class="form-group ">
-      <select id="inputState" class="form-control">
+    <div>
+      <input type="text" class="form-control" placeholder="First Name" required autofocus>
+      <input type="text" class="form-control" placeholder="Last Name" required>
+      <input type="email" class="form-control" placeholder="Email" required>
+      <input type="tel" class="form-control" placeholder="Phone Number" required>
+      <select class="form-control">
         <option selected class="opt">Select Category</option>
         <option>Web Development</option>
         <option>Artificial Intelligence</option>
         <option>Android Development</option>
         <option>Tech Buzz</option>
       </select>
+
+      <div class="radio">
+        <label class="sub-type"><input type="radio" name="optradio">Weekly</label>
+        <label class="sub-type"><input type="radio" name="optradio">Monthly</label>
+      </div>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Me Up!</button>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Me Up!</button>
   </form>
+</div>
   

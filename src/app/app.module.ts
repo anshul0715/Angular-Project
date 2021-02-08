@@ -8,6 +8,7 @@ import { Component1Component } from './component1/component1.component';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     Component1Component,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,
