@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Component1Component {
 
-  warning: string="";
+  warning: string="Not downloaded yet";
   onClick(){
     alert("download started");
     this.warning="downloaded successfully";
