@@ -9,6 +9,9 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  onClick(){
+    alert("successfully signed-up");
+  }
   ngOnInit(): void {
 
   }

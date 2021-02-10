@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./component1.component.scss']
 })
 export class Component1Component {
-
+  onClick(){
+    alert("download started");
+  }
   constructor() { }
 
 }
