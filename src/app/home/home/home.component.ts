@@ -11,10 +11,10 @@ export class HomeComponent implements OnInit {
   constructor(){}
   ngOnInit(): void { 
   }
-  fname="anshul";
-  lname="";
-  mail="";
-  pnumber="";
+  fname:string="Anshul";
+  lname:string="Agarwal";
+  mail:string="abc@def.com";
+  pnumber:number=99999999;
 
   selArray=[{'selItem':'Web Development'},
             {'selItem':'Android Development'},
