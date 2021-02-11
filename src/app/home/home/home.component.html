@@ -5,25 +5,35 @@
     <h3>Signup</h3>
 
     <div>
-      <input type="text" class="form-control" placeholder="First Name" required autofocus>
-      <input type="text" class="form-control" placeholder="Last Name" required>
-      <input type="email" class="form-control" placeholder="Email" required>
-      <input type="tel" class="form-control" placeholder="Phone Number" required>
-      <select class="form-control">
-        <option selected class="opt">Select Category</option>
-        <option>Web Development</option>
-        <option>Artificial Intelligence</option>
-        <option>Android Development</option>
-        <option>Tech Buzz</option>
-      </select>
-
+      <div>
+        <input [(ngModel)]="fname" type="text" class="form-control" placeholder="First Name"  autofocus>
+        <p>{{fname}}</p>
+      </div>
+      <div>
+        <input [(ngModel)]="lname" type="text"  class="form-control" placeholder="Last Name" >
+        <p>{{lname}}</p>
+      </div>
+      <div>
+        <input [(ngModel)]="mail" type="email" class="form-control" placeholder="Email" >
+        <p>{{mail}}</p>
+      </div>
+      <div>
+        <input [(ngModel)]="pnumber" type="tel" class="form-control" placeholder="Phone Number" >
+        <p>{{pnumber}}</p>
+      </div>
+      <div>
+        <select class="form-control">
+          <option selected class="opt">Select Category</option>
+          <option *ngFor="let item of selArray">{{item.selItem}}</option>
+        </select>
+      </div>
       <div class="radio">
         <label class="sub-type"><input type="radio" name="optradio">Weekly</label>
         <label class="sub-type"><input type="radio" name="optradio">Monthly</label>
       </div>
 
-      <button (click)="onClick()" class="btn btn-lg btn-primary btn-block" type="submit">Sign Me Up!</button>
-    </div>
+      <button  class="btn btn-lg btn-primary btn-block" type="submit">Sign Me Up!</button>
+    </div> 
   </form>
 </div>
   

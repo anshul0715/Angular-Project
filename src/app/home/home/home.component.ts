@@ -5,16 +5,22 @@ import { Component, OnInit} from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
-  onClick(){
-    alert("successfully signed-up");
+  constructor(){}
+  ngOnInit(): void { 
   }
-  ngOnInit(): void {
+  fname="anshul";
+  lname="";
+  mail="";
+  pnumber="";
 
-  }
+  selArray=[{'selItem':'Web Development'},
+            {'selItem':'Android Development'},
+            {'selItem':'Artificial Intelligence'}, 
+            {'selItem':'Tech Buzz'}
+           ];
 
-
+  
 }

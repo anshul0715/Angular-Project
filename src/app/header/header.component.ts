@@ -8,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+
   brandName:string="Mindfire Solutions";
-  navButton:string="Log in"
+  logIn:boolean=false;
+  buttonItemT:string="Log in";
+  buttonItemF:string="Sign up";
   navArray=[{'navItem':'HOME'},{'navItem':'ABOUT US'},{'navItem':'CONTACT US'}];
   onClick(){
-    
+    this.logIn=!this.logIn;
   }
   ngOnInit(): void {
   }
