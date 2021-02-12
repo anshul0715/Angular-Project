@@ -1,38 +1,101 @@
 <div class="my-form">
   
-  <form class="form-signin" >
+  <form class="form-signin" (ngSubmit)="onSubmit()" >
     <img src="assets/mf-logo.png" alt="mindfire logo">
     <h3>Signup</h3>
 
+    <div class="row">
+      <div class="col">
+        <input [(ngModel)]="signup.fname" type="text" name="fname" class="form-control" placeholder="First Name" #fname="ngModel"  required>
+        <div class="alert alert-danger" *ngIf="fname.errors  && (fname.dirty || fname.touched)">              
+          Please provide firstname
+        </div>
+      </div>
+      <div class="col">
+        <input [(ngModel)]="signup.lname" type="text" name="lname" class="form-control" placeholder="Last Name"  #lname="ngModel" required>
+        <div class="alert alert-danger" *ngIf="lname.errors  && (lname.dirty || lname.touched)">              
+          Please provide lastname
+        </div>
+      </div>
+    </div>
     <div>
       <div>
-        <input [(ngModel)]="fname" type="text" name="fname" class="form-control" placeholder="First Name"  autofocus>
-        <p>{{fname}}</p>
+        <input [(ngModel)]="signup.mail" type="email" name="mail" class="form-control" placeholder="Email" #mail="ngModel" ngModel email required  >
+        <div class="alert alert-danger" *ngIf="mail.invalid && (mail.dirty || mail.touched)">                               
+          <div *ngIf="mail.hasError('required')">
+            Please provide email.
+          </div>
+          <div *ngIf="mail.hasError('email')">
+            Enter a valid email.
+          </div>
+        </div>
       </div>
       <div>
-        <input [(ngModel)]="lname" type="text" name="lname" class="form-control" placeholder="Last Name" >
-        <p>{{lname}}</p>
+        <input [(ngModel)]="signup.pnumber" type="tel" name="pnumber" class="form-control" placeholder="Phone Number" #pnumber="ngModel" ngModel minlength="10" maxlength="10" required>
+        <div class="alert alert-danger" *ngIf="pnumber.invalid && (pnumber.dirty || pnumber.touched)">                               
+          <div *ngIf="pnumber.hasError('required')">Contact No. is required.</div>
+          <div *ngIf="pnumber.hasError('minlength')">Enter valid No. of length 10.</div>
+          <div *ngIf="pnumber.hasError('maxlength')">Enter valid No. of length 10.</div>
+        </div>           
+      </div>
+      <div class="row">
+      <div class="col address1">
+        <input [(ngModel)]="signup.add1" type="text" name="adress1" class="form-control" placeholder="Address line 1"  #add1="ngModel" required>
+        <div class="alert alert-danger" *ngIf="add1.errors  && (add1.dirty || add1.touched)">              
+          Please provide house no.
+        </div>
+      </div>
+      <div class="col address2">
+        <input [(ngModel)]="signup.add2" type="text" name="address2" class="form-control" placeholder="Address line 2"  #add2="ngModel" required>
+        <div class="alert alert-danger" *ngIf="add2.errors  && (add2.dirty || add2.touched)">              
+          Please provide street name
+        </div>
+      </div>
       </div>
       <div>
-        <input [(ngModel)]="mail" type="email" name="mail" class="form-control" placeholder="Email" >
-        <p>{{mail}}</p>
-      </div>
-      <div>
-        <input [(ngModel)]="pnumber" type="tel" name="pnumber" class="form-control" placeholder="Phone Number" >
-        <p>{{pnumber}}</p>
-      </div>
-      <div>
-        <select class="form-control">
-          <option selected class="opt">Select Category</option>
+        <select [(ngModel)]="signup.state" class="form-control" #state="ngModel" required>
+          <option  class="opt">Select state</option>
           <option *ngFor="let item of selArray">{{item.selItem}}</option>
         </select>
+        <div class="alert alert-danger" *ngIf="state.errors  && (state.dirty || state.touched)">              
+          Please select your state
+        </div>
       </div>
+      <div>
+        <select [(ngModel)]="signup.city" class="form-control" #city="ngModel" required>
+          <option  class="opt">Select city</option>
+          <option *ngFor="let city of cityArray">{{city.cityItem}}</option>
+        </select>
+        <div class="alert alert-danger" *ngIf="city.errors  && (city.dirty || city.touched)">              
+          Please select your city
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input [(ngModel)]="signup.password" type="password" name="Password" class="form-control" placeholder="Create password"  #password="ngModel" ngModel minlength="6" required>
+          <div class="alert alert-danger" *ngIf="password.invalid)">              
+            <div *ngIf="password.hasError('required')">Password is required.</div>
+            <div *ngIf="password.hasError('minlength')">Minimum 6 characters required</div>
+          </div>
+        </div>
+        <div class="col">
+          <input [(ngModel)]="signup.confirmPwd" type="password" name="confirmPwd" class="form-control" placeholder="confirm password"  #confirmPwd="ngModel" ngModel minlength="6" required>
+          <div class="alert alert-danger">              
+            
+          </div>
+    
+        </div>
+      </div>
+      <!--
       <div class="radio">
         <label class="sub-type"><input type="radio" name="optradio">Weekly</label>
         <label class="sub-type"><input type="radio" name="optradio">Monthly</label>
       </div>
-
-      <button  class="btn btn-lg btn-primary btn-block" type="submit">Sign Me Up!</button>
+      -->
+      <div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Me Up!</button>
+      </div>
+      
     </div> 
   </form>
 </div>

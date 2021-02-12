@@ -11,16 +11,20 @@ export class HomeComponent implements OnInit {
   constructor(){}
   ngOnInit(): void { 
   }
-  fname:string="Anshul";
-  lname:string="Agarwal";
-  mail:string="abc@def.com";
-  pnumber:number=99999999;
+  signup:any={};
 
-  selArray=[{'selItem':'Web Development'},
-            {'selItem':'Android Development'},
-            {'selItem':'Artificial Intelligence'}, 
-            {'selItem':'Tech Buzz'}
+  selArray=[{'selItem':'Uttar Pradesh'},
+            {'selItem':'Rajasthan'},
+            {'selItem':'Tamil Nadu'}, 
+            {'selItem':'Maharashtra'}
            ];
+  cityArray=[{'cityItem':'Noida'},
+           {'cityItem':'Kanpur'},
+           {'cityItem':'Varanasi'}, 
+           {'cityItem':'Mathura'}
+          ];
 
-  
+  onSubmit(){
+    alert(JSON.stringify(this.signup,null,4));
+  }
 }
