@@ -73,7 +73,7 @@
       <div class="row">
         <div class="col">
           <input [(ngModel)]="signup.password" type="password" name="Password" class="form-control" placeholder="Create password"  #password="ngModel" ngModel minlength="6" required>
-          <div class="alert alert-danger" *ngIf="password.invalid)">              
+          <div class="alert alert-danger" *ngIf="password.invalid">              
             <div *ngIf="password.hasError('required')">Password is required.</div>
             <div *ngIf="password.hasError('minlength')">Minimum 6 characters required</div>
           </div>
