@@ -54,7 +54,7 @@
       </div>
       <div>
         <select [(ngModel)]="signup.state" class="form-control" #state="ngModel" required>
-          <option  class="opt">Select state</option>
+          
           <option *ngFor="let item of selArray">{{item.selItem}}</option>
         </select>
         <div class="alert alert-danger" *ngIf="state.errors  && (state.dirty || state.touched)">              
@@ -63,7 +63,7 @@
       </div>
       <div>
         <select [(ngModel)]="signup.city" class="form-control" #city="ngModel" required>
-          <option  class="opt">Select city</option>
+          
           <option *ngFor="let city of cityArray">{{city.cityItem}}</option>
         </select>
         <div class="alert alert-danger" *ngIf="city.errors  && (city.dirty || city.touched)">              

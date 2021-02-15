@@ -2,8 +2,13 @@
     <img src="assets/nav-img.png" width="30" height="30" class="d-inline-block align-top" alt="Mindfire logo">
     <a class="navbar-brand">{{brandName}}</a>
     <ul class="navbar-nav ml-auto">
-      <li *ngFor="let item of navArray" class="nav-item" ><a href="#" class="nav-link">{{item.navItem}}</a></li>
-      
+      <!--<li *ngFor="let item of navArray" class="nav-item" ><a href="#" class="nav-link">{{item.navItem}}</a></li>-->
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" 
+        routerLink="/brand">Home</a></li>
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" 
+        routerLink="/about">About us</a></li>  
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" 
+        routerLink="/contact">Contact us</a></li> 
     </ul>
     <form class="form-inline">
       <input  class="form-control mr-sm-2" type="email" placeholder="Email id">
@@ -12,6 +17,7 @@
       </div>
       <div *ngIf="!logIn">
         <button (click)="onClick()" class="btn btn-primary " type="submit">{{buttonItemF}}</button>
+        
       </div>
       
     </form>

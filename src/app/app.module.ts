@@ -10,6 +10,9 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { ImageComponent } from './image/image.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { BrandComponent } from './brand/brand.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { ImageComponent } from './image/image.component';
     Component1Component,
     HeaderComponent,
     FooterComponent,
-    ImageComponent
+    ImageComponent,
+    AboutComponent,
+    ContactComponent,
+    BrandComponent
   ],
   imports: [
     BrowserModule,
