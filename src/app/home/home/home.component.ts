@@ -12,29 +12,18 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void { 
   }
   signup:any={};
-
-  stateList: Array<any> = [
-    { name: 'Uttar Pradesh', cities: ['Duesseldorf', 'Leinfelden-Echterdingen', 'Eschborn'] },
-    { name: 'Spain', cities: ['Barcelona'] },
-    { name: 'USA', cities: ['Downers Grove'] },
-    { name: 'Mexico', cities: ['Puebla'] },
-    { name: 'China', cities: ['Beijing'] },
+  cities: any[] = [];
+  countryList: Array<any> = [
+    { name: 'Uttar Pradesh', cities: ['Noida', 'Kanpur', 'Varanasi'] },
+    { name: 'Rajasthan', cities: ['Jaipur','Kota','Udaipur'] },
+    { name: 'Tamil Nadu', cities: ['Chennai','Madurai','Vellore'] },
+    { name: 'Maharashtra', cities: ['Mumbai','Pune','Nagpur'] },
   ];
 
-  selArray=[{'selItem':'Uttar Pradesh'},
-            {'selItem':'Rajasthan'},
-            {'selItem':'Tamil Nadu'}, 
-            {'selItem':'Maharashtra'}
-           ];
-  cityArray=[{'cityItem':'Noida'},
-           {'cityItem':'Kanpur'},
-           {'cityItem':'Varanasi'}, 
-           {'cityItem':'Mathura'}
-          ];
-          cities: Array<any>;
-          changeCountry(count) {
-            this.cities = this.countryList.find(con => con.name == count).cities;
-          }
+ 
+  changeCountry(count:any) {
+    this.cities = this.countryList.find(con => con.name == count).cities;
+  }
   onSubmit(){
     alert(JSON.stringify(this.signup,null,4));
   }

@@ -53,18 +53,16 @@
       </div>
       </div>
       <div>
-        <select [(ngModel)]="signup.state" class="form-control" #state="ngModel" required>
-          
-          <option *ngFor="let item of selArray">{{item.selItem}}</option>
+        <select [(ngModel)]="signup.state" class="form-control" #state="ngModel"   >
+          <option *ngFor ="let count of countryList">{{count.name}}</option>
         </select>
         <div class="alert alert-danger" *ngIf="state.errors  && (state.dirty || state.touched)">              
           Please select your state
         </div>
       </div>
       <div>
-        <select [(ngModel)]="signup.city" class="form-control" #city="ngModel" required>
-          
-          <option *ngFor="let city of cityArray">{{city.cityItem}}</option>
+        <select [(ngModel)]="signup.city" class="form-control" #city="ngModel" >
+          <option *ngFor ="let city of cities">{{city}}</option>
         </select>
         <div class="alert alert-danger" *ngIf="city.errors  && (city.dirty || city.touched)">              
           Please select your city
@@ -73,14 +71,14 @@
       <div class="row">
         <div class="col">
           <input [(ngModel)]="signup.password" type="password" name="Password" class="form-control" placeholder="Create password"  #password="ngModel" ngModel minlength="6" required>
-          <div class="alert alert-danger" *ngIf="password.invalid">              
+          <div class="alert alert-danger" *ngIf="password.invalid && password.touched">              
             <div *ngIf="password.hasError('required')">Password is required</div>
             <div *ngIf="password.hasError('minlength')">Minimum 6 characters required</div>
           </div>
         </div>
         <div class="col">
           <input [(ngModel)]="signup.confirmPwd" type="password" name="confirmPwd" class="form-control" placeholder="confirm password"  #confirmPwd="ngModel" ngModel minlength="6" required>
-          <div class="alert alert-danger" *ngIf="signup.password!=signup.confirmPwd">              
+          <div class="alert alert-danger" *ngIf="signup.password!=signup.confirmPwd && confirmPwd.touched" >              
             Password not matching
           </div>
     
