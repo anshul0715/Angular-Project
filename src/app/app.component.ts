@@ -12,10 +12,8 @@ export class AppComponent {
 
   }
   ngOnInit(){
-    this.api.getCall().subscribe(
-      (data)=>{
-        console.log("get api data",data)
-      }
-    )
+    this.api.getCall().subscribe((data)=>{
+        alert(JSON.stringify(data,null,4));
+      })
   }
 }
