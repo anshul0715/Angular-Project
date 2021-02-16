@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { GetCallService } from './get-call.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  constructor(private http: HttpClient) { }
   title = 'mindfire';
+  constructor(private api: GetCallService){
+
+  }
+  ngOnInit(){
+    this.api.getCall().subscribe(
+      (data)=>{
+        console.log("get api data",data)
+      }
+    )
+  }
 }
