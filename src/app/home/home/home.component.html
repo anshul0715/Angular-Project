@@ -54,7 +54,7 @@
       </div>
       <div>
         <select [(ngModel)]="signup.state" class="form-control" #state="ngModel"   >
-          <option *ngFor ="let count of countryList">{{count.name}}</option>
+          <option *ngFor ="let count of stateList">{{count.name}}</option>
         </select>
         <div class="alert alert-danger" *ngIf="state.errors  && (state.dirty || state.touched)">              
           Please select your state

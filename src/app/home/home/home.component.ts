@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   }
   signup:any={};
   cities: any[] = [];
-  countryList: Array<any> = [
+  stateList: Array<any> = [
     { name: 'Uttar Pradesh', cities: ['Noida', 'Kanpur', 'Varanasi'] },
     { name: 'Rajasthan', cities: ['Jaipur','Kota','Udaipur'] },
     { name: 'Tamil Nadu', cities: ['Chennai','Madurai','Vellore'] },
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
  
   changeCountry(count:any) {
-    this.cities = this.countryList.find(con => con.name == count).cities;
+    this.cities = this.stateList.find(con => con.name == count).cities;
   }
   onSubmit(){
     alert(JSON.stringify(this.signup,null,4));
