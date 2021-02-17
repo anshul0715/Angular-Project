@@ -8,9 +8,8 @@ import { GetCallService } from './get-call.service';
 })
 export class AppComponent {
   title = 'mindfire';
-  constructor(private api: GetCallService){
-
-  }
+  constructor(private api: GetCallService){ }
+  
   ngOnInit(){
     this.api.getCall().subscribe((data)=>{
         alert(JSON.stringify(data,null,4));
