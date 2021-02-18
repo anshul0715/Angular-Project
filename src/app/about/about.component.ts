@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   constructor() { }
-
+  message: string="This message is from about component";
   ngOnInit(): void {
   }
-
+  childMessage:string="";
+  recieveMessage($event:string){
+    this.childMessage=$event;
+  }
 }
