@@ -9,10 +9,12 @@ import { GetCallService } from './get-call.service';
 
 export class AppComponent {
   title:string = 'mindfire';
+  result:any;
   constructor(private api: GetCallService){ }
   ngOnInit(): void{
     this.api.getCall().subscribe((data)=>{
         console.log(JSON.stringify(data,null,4));
+        this.result=data
       })
   }
 }

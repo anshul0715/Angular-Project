@@ -13,6 +13,6 @@ export class GetCallService {
    }
    
    getCall(): Observable<CommonDTO>{
-     return this.http.get('https://jsonplaceholder.typicode.com/todos/1');
+     return this.http.get('https://jsonplaceholder.typicode.com/posts');
    }
 }
