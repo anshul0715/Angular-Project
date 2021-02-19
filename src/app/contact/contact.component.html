@@ -1,3 +1,22 @@
 <div class="contact">
-    <h1>This is Contact Us Page</h1>
+    <div class="heading">
+        <h1>Fill your contact details and we will get in touch with you</h1>
+    </div>
+    <form class="form-contact">
+        <h1 class="h3 mb-3 font-weight-normal">Your Contact Details</h1>
+    
+        <input [(ngModel)]="contactUs.fname" type="text" name="fname" class="form-control" placeholder="First Name" #fname="ngModel" required >
+        <input [(ngModel)]="contactUs.lname" type="text" name="lname" class="form-control" placeholder="Last Name" #lname="ngModel" required>
+        <input [(ngModel)]="contactUs.email" type="email" name="email" class="form-control" placeholder="Email" #email="ngModel" required>
+        <button (click)="postData()" class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+      </form>
+      <div class="userData"> 
+          <h3>Your details will be displayed here</h3>  
+            <h5 *ngFor="let item of result | keyvalue">{{item.key}} : {{item.value}}</h5>
+      </div>
+   
+          
+      
+
 </div>
+

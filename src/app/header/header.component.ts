@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   logIn:boolean=false;
   buttonItemT:string="Log in";
   buttonItemF:string="Sign up";
-  navArray=[{'navItem':'HOME'},{'navItem':'ABOUT US'},{'navItem':'CONTACT US'}];
+  navArray:{navItem:string}[]=[{'navItem':'HOME'},{'navItem':'ABOUT US'},{'navItem':'CONTACT US'}];
   onClick(){
     this.logIn=!this.logIn;
   }

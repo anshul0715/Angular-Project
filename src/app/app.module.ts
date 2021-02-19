@@ -14,6 +14,7 @@ import { ImageComponent } from './image/image.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrandComponent } from './brand/brand.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { BrandComponent } from './brand/brand.component';
     ImageComponent,
     AboutComponent,
     ContactComponent,
-    BrandComponent
+    BrandComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

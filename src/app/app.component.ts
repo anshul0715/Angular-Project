@@ -6,13 +6,13 @@ import { GetCallService } from './get-call.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'mindfire';
+  title:string = 'mindfire';
   constructor(private api: GetCallService){ }
-  
-  ngOnInit(){
+  ngOnInit(): void{
     this.api.getCall().subscribe((data)=>{
-        alert(JSON.stringify(data,null,4));
+        console.log(JSON.stringify(data,null,4));
       })
   }
 }
