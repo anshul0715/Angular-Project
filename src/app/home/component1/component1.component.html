@@ -1,7 +1,16 @@
-<div class="download">
-    <h3 class="comp-heading">Download our App</h3>
-    <button (click)="onClick()" type="button" class="btn btn-dark btn-lg download-buttons"><i class="fa fa-apple"></i> Download</button>
-    <button (click)="onClick()" type="button" class="btn btn-light btn-lg download-buttons"><i class="fa fa-android"></i> Download</button>
-    <p>{{warning}}</p>
+<div>
+    <div class="download">
+        <h3 class="comp-heading">Download our App</h3>
+        <button (click)="onClick()" type="button" class="btn btn-dark btn-lg download-buttons"><i class="fa fa-apple"></i> Download</button>
+        <button (click)="onClick()" type="button" class="btn btn-light btn-lg download-buttons"><i class="fa fa-android"></i> Download</button>
+        <p>{{warning}}</p>
+    </div>
+    <div class="call">
+        <h1 class="data-heading">Data from GET call</h1>
+        <ul>
+            <li *ngFor="let item of result">{{item.title}}</li>
+        </ul>
+    </div>
 </div>
+
 

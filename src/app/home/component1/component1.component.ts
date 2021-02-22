@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetCallService } from '../../services/get-call.service';
 
 @Component({
   selector: 'app-component1',
@@ -12,6 +13,13 @@ export class Component1Component {
     alert("download started");
     this.warning="downloaded successfully";
   }
-  constructor() { }
+  result:any;
+  constructor(private api: GetCallService){ }
+  ngOnInit(): void{
+    this.api.getCall().subscribe((data)=>{
+        console.log(JSON.stringify(data,null,4));
+        this.result=data
+      })
+  }
 
 }
