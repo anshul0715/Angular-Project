@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GetCallService } from '../../services/get-call.service';
+import { GetCallService } from '../../services/get-call/get-call.service';
+
 
 @Component({
   selector: 'app-component1',

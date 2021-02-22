@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,8 @@ import { AboutComponent } from './navbar-components/about/about.component';
 import { ContactComponent } from './navbar-components/contact/contact.component';
 import { BrandComponent } from './navbar-components/brand/brand.component';
 import { ChildComponent } from './child/child.component';
+import { LoaderComponent } from './common/loader/loader.component';
+import { LoaderInterceptor } from './loader.interceptor';
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { ChildComponent } from './child/child.component';
     AboutComponent,
     ContactComponent,
     BrandComponent,
-    ChildComponent
+    ChildComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ import { ChildComponent } from './child/child.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CommonDTO } from '../common/types/commonDTO';
+import { CommonDTO } from '../../common/types/commonDTO';
 import { Observable } from 'rxjs';
 
 @Injectable({
