@@ -5,22 +5,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home/home.component';
-import { Component1Component } from './component1/component1.component';
-import { HeaderComponent } from './header/header.component';
+import { signupComponent } from './home/signup/signup.component';
+import { Component1Component } from './home/component1/component1.component';
+import { HeaderComponent } from './common/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FooterComponent } from './footer/footer.component';
-import { ImageComponent } from './image/image.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { BrandComponent } from './brand/brand.component';
+import { FooterComponent } from './common/footer/footer.component';
+import { ImageComponent } from './home/image/image.component';
+import { AboutComponent } from './navbar-components/about/about.component';
+import { ContactComponent } from './navbar-components/contact/contact.component';
+import { BrandComponent } from './navbar-components/brand/brand.component';
 import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    signupComponent,
     Component1Component,
     HeaderComponent,
     FooterComponent,

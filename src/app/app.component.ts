@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GetCallService } from './get-call.service';
+import { GetCallService } from './services/get-call.service';
 
 @Component({
   selector: 'app-root',
