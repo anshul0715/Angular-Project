@@ -1,0 +1,11 @@
+<div class="login">
+    <div class="heading">
+        <h1>Please Login to Continue</h1>
+    </div>
+    <form class="form-login">
+        <input class="form-control" type="text" #u1 placeholder="Username" /><br>
+        <input class="form-control" type="password" #p2 placeholder="Password"/><br/>
+        <button class="btn btn-lg btn-primary btn-block" (click)="check(u1.value, p2.value)">Login</button>
+    </form>
+    <span>{{ msg }}</span>
+</div>
