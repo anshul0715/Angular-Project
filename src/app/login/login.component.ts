@@ -14,12 +14,12 @@ export class LoginComponent implements OnInit {
   msg:string="";
   ngOnInit() {
   }
-  check(uname: string, p : string)
+  check(uname: string, pwd : string)
   {
-    var output = this.service.checkusernameandpassword(uname, p);
+    var output = this.service.checkusernameandpassword(uname, pwd);
     if(output == true)
     {
-      this.routes.navigate(['/dashboard']);
+      this.routes.navigate(['/brand']);
     }
     else{
       this.msg ='Invalid username or password';
