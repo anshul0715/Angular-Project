@@ -16,9 +16,12 @@ export class LoginService {
       return false;
     }
   }
-
+  loggedIn(){
+    return !!localStorage.getItem('username')
+  }
   logOut(){
       localStorage.removeItem('username');
       this.routes.navigate(['/login'])
+      
   }
 }

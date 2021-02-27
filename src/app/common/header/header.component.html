@@ -13,10 +13,10 @@
           routerLink="/login">Login</a></li> 
     </ul>
     <form class="form-inline">
-      <div *ngIf="logIn"  >
+      <div *ngIf="!service.loggedIn()"  >
         <button (click)="onClick()" class="btn btn-primary " type="submit">Sign Up</button>
       </div>
-      <div *ngIf="!logIn">
+      <div *ngIf="service.loggedIn()">
         <button (click)="service.logOut()" class="btn btn-primary " type="submit">Log Out</button>
       </div>
     </form>
