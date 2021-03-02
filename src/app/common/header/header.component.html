@@ -9,15 +9,16 @@
         routerLink="/about">About us</a></li>  
       <li class="nav-item"><a class="nav-link" routerLinkActive="active" 
         routerLink="/contact">Contact us</a></li>
-        <li class="nav-item"><a class="nav-link" *ngif="service.checkusernameandpassword()" routerLinkActive="active" 
-          routerLink="/login">Login</a></li> 
+      <li class="nav-item" *ngIf="!service.loggedIn()"><a class="nav-link"  routerLinkActive="active" 
+        routerLink="/login">Login</a></li> 
     </ul>
     <form class="form-inline">
       <div *ngIf="!service.loggedIn()"  >
-        <button (click)="onClick()" class="btn btn-primary " type="submit">Sign Up</button>
+        <button (click)="onClick()" class="btn btn-primary " type="submit" routerLinkActive="active" 
+        routerLink="/signup">Sign Up</button>
       </div>
       <div *ngIf="service.loggedIn()">
-        <button (click)="service.logOut()" class="btn btn-primary " type="submit">Log Out</button>
+        <button (click)="service.logOut()" class="btn btn-danger " type="submit">Log Out</button>
       </div>
     </form>
   </nav> 
