@@ -6,8 +6,7 @@ import {Router} from '@angular/router'
 })
 export class LoginService {
   constructor(private routes: Router) { }
-  checkusernameandpassword(uname: string, pwd : string)
-  {
+  checkusernameandpassword(uname: string, pwd : string):boolean{
     if(uname == "anshul" && pwd =="123456"){
       localStorage.setItem('username',"anshul");
       return true;
@@ -16,9 +15,11 @@ export class LoginService {
       return false;
     }
   }
+
   loggedIn(){
-    return !!localStorage.getItem('username')
+    return localStorage.getItem('username')
   }
+  
   logOut(){
       localStorage.removeItem('username');
       this.routes.navigate(['/login'])

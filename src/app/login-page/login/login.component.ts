@@ -13,9 +13,9 @@ export class LoginComponent implements OnInit {
 
   constructor(private service : LoginService , private routes: Router) { }
   msg:string="";
-  ngOnInit() {
+  ngOnInit():void {
   }
-  check(uname: string, pwd : string)
+  check(uname: string, pwd : string):any
   {
     var output = this.service.checkusernameandpassword(uname, pwd);
     if(output == true)

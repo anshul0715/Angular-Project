@@ -3,9 +3,9 @@
         <h1>Please Login to Continue</h1>
     </div>
     <form class="form-login">
-        <input class="form-control" type="text" #u1 placeholder="Username" /><br>
-        <input class="form-control" type="password" #p2 placeholder="Password"/><br/>
-        <button class="btn btn-lg btn-primary btn-block" (click)="check(u1.value, p2.value)">Login</button>
+        <input class="form-control" type="text" #user placeholder="Username" /><br>
+        <input class="form-control" type="password" #pwd placeholder="Password"/><br/>
+        <button class="btn btn-lg btn-primary btn-block" (click)="check(user.value, pwd.value)">Login</button>
     </form>
     <span>{{ msg }}</span>
 </div>
