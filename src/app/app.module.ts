@@ -14,10 +14,10 @@ import { ImageComponent } from './home/image/image.component';
 import { AboutComponent } from './navbar-components/about/about.component';
 import { ContactComponent } from './navbar-components/contact/contact.component';
 import { BrandComponent } from './navbar-components/brand/brand.component';
-import { ChildComponent } from './child/child.component';
+import { ChildComponent } from './navbar-components/child/child.component';
 import { LoaderComponent } from './common/loader/loader.component';
-import { LoaderInterceptor } from './loader.interceptor';
-import { LoginComponent } from './login/login.component';
+import { LoaderInterceptor } from './services/loader/loader.interceptor';
+import { LoginComponent } from './login-page/login/login.component';
 
 
 @NgModule({

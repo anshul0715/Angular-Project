@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpResponse } from "@angular/common/http";
 import { tap } from "rxjs/operators";
-import { LoaderService } from "./services/loader/loader.service";
+import { LoaderService } from "./loader.service";
 @Injectable()
 export class LoaderInterceptor implements HttpInterceptor {
   constructor(private loaderService: LoaderService) {}

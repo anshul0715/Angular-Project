@@ -3,9 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './navbar-components/about/about.component';
 import { ContactComponent } from './navbar-components/contact/contact.component';
 import { BrandComponent } from './navbar-components/brand/brand.component';
-import { AuthGuard } from './auth.guard';
-import { LoginService } from './login.service';
-import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './login-page/auth.guard';
+import { LoginComponent } from './login-page/login/login.component';
 import { signupComponent } from './home/signup/signup.component';
 const routes: Routes = [
   {path: 'brand',component:BrandComponent, canActivate:[AuthGuard]},
